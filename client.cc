@@ -4,6 +4,7 @@
  *  Created on: Jun 14, 2023
  *      Author: w10165927
  */
+// HI
 #include<omnetpp.h>
 
 std::string resource_type[6] = {"a", "b", "c", "d", "e", "f"};
