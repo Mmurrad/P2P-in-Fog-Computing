@@ -1,0 +1,145 @@
+E # 0 t 0 m 1 ce -1 msg -1
+SB v 1026 rid General-0-20230706-13:32:54-3704 b 1000
+KF p -1 c "" s ""
+MC id 1 c cCompoundModule t testproject.Network n Network cm 1
+MS id 1 d bgb=1182,429
+MC id 2 c server t testproject.server pid 1 n Server
+GC m 2 g 0 n radioIn o 0
+MS id 2 d i=device/wifilaptop;p=523,45
+MC id 3 c fog t testproject.fog pid 1 n Fog
+GC m 3 g 0 n radioIn o 0
+MS id 3 d i=device/wifilaptop;p=875,197
+MC id 4 c fog1 t testproject.fog1 pid 1 n Fog1
+GC m 4 g 0 n radioIn o 0
+MS id 4 d i=device/wifilaptop;p=789,126
+MC id 5 c fog2 t testproject.fog2 pid 1 n Fog2
+GC m 5 g 0 n radioIn o 0
+MS id 5 d i=device/wifilaptop;p=662,197
+MC id 6 c fog3 t testproject.fog3 pid 1 n Fog3
+GC m 6 g 0 n radioIn o 0
+MS id 6 d i=device/wifilaptop;p=342,208
+MC id 7 c fog4 t testproject.fog4 pid 1 n Fog4
+GC m 7 g 0 n radioIn o 0
+MS id 7 d i=device/wifilaptop;p=98,206
+MC id 8 c fog5 t testproject.fog5 pid 1 n Fog5
+GC m 8 g 0 n radioIn o 0
+MS id 8 d i=device/wifilaptop;p=227,126
+MC id 9 c client t testproject.client pid 1 n Client
+GC m 9 g 0 n radioIn o 0
+MS id 9 d p=779,341
+MC id 10 c fog_client1 t testproject.fog_client1 pid 1 n Client1
+GC m 10 g 0 n radioIn o 0
+MS id 10 d i=device/wifilaptop;p=218,362
+MB sm 1 tm 2 m initialize(0)
+ME
+MB sm 1 tm 3 m initialize(0)
+- Fog initialize
+CM id 0 tid 0 eid 0 etid 0 c cMessage n RTS pe -1
+CL id 0 tid 0 eid 0 etid 0 c cMessage n RTS pe 0 cid 1
+BS id 1 tid 0 eid 1 etid 0 c cMessage n RTS pe 0
+ES t 0.548813502304
+- Fog initialize complete
+ME
+MB sm 1 tm 4 m initialize(0)
+- Fog1 initialize
+CM id 2 tid 2 eid 2 etid 2 c cMessage n RTS pe -1
+CL id 2 tid 2 eid 2 etid 2 c cMessage n RTS pe 0 cid 3
+BS id 3 tid 2 eid 3 etid 2 c cMessage n RTS pe 0
+ES t 0.592844616388
+- Fog1 initialize complete
+ME
+MB sm 1 tm 5 m initialize(0)
+- Fog2 initialize
+CM id 4 tid 4 eid 4 etid 4 c cMessage n RTS pe -1
+CL id 4 tid 4 eid 4 etid 4 c cMessage n RTS pe 0 cid 5
+BS id 5 tid 4 eid 5 etid 4 c cMessage n RTS pe 0
+ES t 0.715189364971
+- Fog2 initialize complete
+ME
+MB sm 1 tm 6 m initialize(0)
+- Fog3 initialize
+CM id 6 tid 6 eid 6 etid 6 c cMessage n RTS pe -1
+CL id 6 tid 6 eid 6 etid 6 c cMessage n RTS pe 0 cid 7
+BS id 7 tid 6 eid 7 etid 6 c cMessage n RTS pe 0
+ES t 0.84426574409
+- Fog3 initialize complete
+ME
+MB sm 1 tm 7 m initialize(0)
+- Fog4 initialize
+CM id 8 tid 8 eid 8 etid 8 c cMessage n RTS pe -1
+CL id 8 tid 8 eid 8 etid 8 c cMessage n RTS pe 0 cid 9
+BS id 9 tid 8 eid 9 etid 8 c cMessage n RTS pe 0
+ES t 0.602763370377
+- Fog4 initialize complete
+ME
+MB sm 1 tm 8 m initialize(0)
+- Fog5 initialize
+CM id 10 tid 10 eid 10 etid 10 c cMessage n RTS pe -1
+CL id 10 tid 10 eid 10 etid 10 c cMessage n RTS pe 0 cid 11
+BS id 11 tid 10 eid 11 etid 10 c cMessage n RTS pe 0
+ES t 0.857945619849
+- Fog5 initialize complete
+ME
+MB sm 1 tm 9 m initialize(0)
+- client initialize
+CM id 12 tid 12 eid 12 etid 12 c cMessage n a pe -1
+CL id 12 tid 12 eid 12 etid 12 c cMessage n a pe 0 cid 13
+BS id 13 tid 12 eid 13 etid 12 c cMessage n a pe 0
+ES t 0.544883177382
+- client initialize complete
+ME
+MB sm 1 tm 10 m initialize(0)
+- client1 initialize
+CM id 14 tid 14 eid 14 etid 14 c cMessage n RTS pe -1
+CL id 14 tid 14 eid 14 etid 14 c cMessage n RTS pe 0 cid 15
+BS id 15 tid 14 eid 15 etid 14 c cMessage n RTS pe 0
+ES t 0.847251737257
+- client1 initialize complete
+ME
+
+E # 1 t 0.544883177382 m 9 ce 0 msg 13
+- client handle message initialize
+CM id 16 tid 16 eid 16 etid 16 c cMessage n a pe -1
+BS id 16 tid 16 eid 16 etid 16 c cMessage n a pe 1
+SD sm 9 dm 7 dg 0
+ES t 0.544883177382
+CL id 16 tid 16 eid 16 etid 16 c cMessage n a pe 1 cid 17
+BS id 17 tid 16 eid 17 etid 16 c cMessage n a pe 1
+ES t 0.96853797417
+
+E # 2 t 0.544883177382 m 7 ce 1 msg 16
+- Fog4 handle message initialize
+CM id 18 tid 18 eid 18 etid 18 c cMessage n RTS pe -1
+BS id 18 tid 18 eid 18 etid 18 c cMessage n RTS pe 2
+SD sm 7 dm 8 dg 0
+ES t 0.544883177382
+CL id 18 tid 18 eid 18 etid 18 c cMessage n RTS pe 2 cid 19
+BS id 19 tid 18 eid 19 etid 18 c cMessage n RTS pe 2
+ES t 1.168446873779
+
+E # 3 t 0.544883177382 m 8 ce 2 msg 18
+- Fog5 handle message initialize
+CM id 20 tid 20 eid 20 etid 20 c cMessage n RTS pe -1
+BS id 20 tid 20 eid 20 etid 20 c cMessage n RTS pe 3
+SD sm 8 dm 2 dg 0
+ES t 0.544883177382
+CL id 20 tid 20 eid 20 etid 20 c cMessage n RTS pe 3 cid 21
+BS id 21 tid 20 eid 21 etid 20 c cMessage n RTS pe 3
+ES t 1.190777292474
+
+E # 4 t 0.544883177382 m 2 ce 3 msg 20
+CM id 22 tid 22 eid 22 etid 22 c cMessage n CTS pe -1
+BS id 22 tid 22 eid 22 etid 22 c cMessage n CTS pe 4
+SD sm 2 dm 9 dg 0
+ES t 0.544883177382
+
+E # 5 t 0.544883177382 m 9 ce 4 msg 22
+- client handle message initialize
+CM id 23 tid 23 eid 23 etid 23 c cMessage n a pe -1
+BS id 23 tid 23 eid 23 etid 23 c cMessage n a pe 5
+SD sm 9 dm 9 dg 0
+ES t 0.544883177382
+CL id 23 tid 23 eid 23 etid 23 c cMessage n a pe 5 cid 24
+BS id 24 tid 23 eid 24 etid 23 c cMessage n a pe 5
+ES t 0.929264885605
+SE e 0 c 9 m "The user has finished the simulation at event #6, t=0.544883177382."
