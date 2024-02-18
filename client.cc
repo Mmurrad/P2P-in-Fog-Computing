@@ -10,8 +10,8 @@
 std::string resource_type[6] = {"a", "b", "c", "d", "e", "f"};
 
 char res_type = 'b';
-int resource_code = 22;
-int logical_add = 202;
+int resource_code = 17;
+int logical_add = 201;
 int c_count=0;
 std::string message= "hi";
 
@@ -30,7 +30,7 @@ Define_Module(client);
 
 void client::initialize(){
     EV <<"client initialize" <<"\n";
-    cmsg = new cMessage("a");
+    cmsg = new cMessage("client_message");
     limit = par("lmt");
 
     scheduleAt(simTime()+dblrand(), cmsg->dup());
@@ -41,7 +41,7 @@ void client::handleMessage(cMessage *cmsg)
 {
     EV << "client handle message initialize"<<"\n";
     cModule *targetc;
-    cmsg = new cMessage("a");
+    cmsg = new cMessage("client_message");
 
     if(c_count==0)
     {
@@ -106,7 +106,7 @@ Define_Module(fog);
 
 void fog::initialize(){
     EV <<"Fog initialize" <<"\n";
-    msg = new cMessage("RTS");
+    msg = new cMessage("fog_RTS");
 
     scheduleAt(simTime()+dblrand(), msg->dup());
     EV <<"Fog initialize complete" <<"\n";
@@ -115,7 +115,7 @@ void fog::handleMessage(cMessage *msg)
 {
     EV << "Fog handle message initialize"<<"\n";
     cModule *target;
-    msg = new cMessage("RTS");
+    msg = new cMessage("fog_RTS");
     target = getParentModule()->getSubmodule("Fog1");
 
     sendDirect(msg, target, "radioIn");
@@ -134,7 +134,7 @@ Define_Module(fog1);
 
 void fog1::initialize(){
     EV <<"Fog1 initialize" <<"\n";
-    msg1 = new cMessage("RTS");
+    msg1 = new cMessage("fog1_RTS");
 
     scheduleAt(simTime()+dblrand(), msg1->dup());
     EV <<"Fog1 initialize complete" <<"\n";
@@ -143,7 +143,7 @@ void fog1::handleMessage(cMessage *msg1)
 {
     EV << "Fog1 handle message initialize"<<"\n";
     cModule *target1;
-    msg1 = new cMessage("RTS");
+    msg1 = new cMessage("fog1_RTS");
     target1 = getParentModule()->getSubmodule("Fog2");
 
     sendDirect(msg1, target1, "radioIn");
@@ -161,7 +161,7 @@ Define_Module(fog2);
 
 void fog2::initialize(){
     EV <<"Fog2 initialize" <<"\n";
-    msg2 = new cMessage("RTS");
+    msg2 = new cMessage("fog2_RTS");
 
     scheduleAt(simTime()+dblrand(), msg2->dup());
     EV <<"Fog2 initialize complete" <<"\n";
@@ -170,8 +170,8 @@ void fog2::handleMessage(cMessage *msg2)
 {
     EV << "Fog2 handle message initialize"<<"\n";
     cModule *target2;
-    msg2 = new cMessage("RTS");
-    target2 = getParentModule()->getSubmodule("Fog3");
+    msg2 = new cMessage("fog2_RTS");
+    target2 = getParentModule()->getSubmodule("Server");
 
     sendDirect(msg2, target2, "radioIn");
     scheduleAt(simTime()+dblrand(), msg2->dup());
@@ -190,7 +190,7 @@ Define_Module(fog3);
 
 void fog3::initialize(){
     EV <<"Fog3 initialize" <<"\n";
-    msg3 = new cMessage("RTS");
+    msg3 = new cMessage("fog3_RTS");
 
     scheduleAt(simTime()+dblrand(), msg3->dup());
     EV <<"Fog3 initialize complete" <<"\n";
@@ -199,7 +199,7 @@ void fog3::handleMessage(cMessage *msg3)
 {
     EV << "Fog3 handle message initialize"<<"\n";
     cModule *target3;
-    msg3 = new cMessage("RTS");
+    msg3 = new cMessage("fog3_RTS");
     target3 = getParentModule()->getSubmodule("Fog4");
 
     sendDirect(msg3, target3, "radioIn");
@@ -218,7 +218,7 @@ Define_Module(fog4);
 
 void fog4::initialize(){
     EV <<"Fog4 initialize" <<"\n";
-    msg4 = new cMessage("RTS");
+    msg4 = new cMessage("fog4_RTS");
 
     scheduleAt(simTime()+dblrand(), msg4->dup());
     EV <<"Fog4 initialize complete" <<"\n";
@@ -227,7 +227,7 @@ void fog4::handleMessage(cMessage *msg4)
 {
     EV << "Fog4 handle message initialize"<<"\n";
     cModule *target4;
-    msg4 = new cMessage("RTS");
+    msg4 = new cMessage("fog4_RTS");
     target4 = getParentModule()->getSubmodule("Fog5");
 
     sendDirect(msg4, target4, "radioIn");
@@ -246,7 +246,7 @@ Define_Module(fog5);
 
 void fog5::initialize(){
     EV <<"Fog5 initialize" <<"\n";
-    msg5 = new cMessage("RTS");
+    msg5 = new cMessage("fog5_RTS");
 
     scheduleAt(simTime()+dblrand(), msg5->dup());
     EV <<"Fog5 initialize complete" <<"\n";
@@ -255,7 +255,7 @@ void fog5::handleMessage(cMessage *msg5)
 {
     EV << "Fog5 handle message initialize"<<"\n";
     cModule *target5;
-    msg5 = new cMessage("RTS");
+    msg5 = new cMessage("fog5_RTS");
     target5 = getParentModule()->getSubmodule("Server");
 
     sendDirect(msg5, target5, "radioIn");

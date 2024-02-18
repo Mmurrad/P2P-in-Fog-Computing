@@ -83,19 +83,18 @@ simple fog5
 
 simple client
 {
-    parameters: 
-        int lmt = default(2)
-    	@display("i=device/wifilaptop;p=230,40");
+    parameters:
+        int lmt @display("i=device/wifilaptop;p=230,40") = default(2);
     gates:
         input radioIn @directIn;
 }
 
-simple fog_client1
-{
-    @display("i=device/wifilaptop;p=230,40");
-    gates:
-        input radioIn @directIn;
-}
+//simple fog_client1
+//{
+//    @display("i=device/wifilaptop;p=230,40");
+//    gates:
+//        input radioIn @directIn;
+//}
 
 //
 // TODO documentation
@@ -127,9 +126,6 @@ network Network
         }
         Client: client {
             @display("p=779,341");
-        }
-        Client1: fog_client1 {
-            @display("p=218,362");
         }
 }
 
